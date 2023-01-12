@@ -29,7 +29,7 @@ class Prime {
 
 const bill = new Prime();
 const total = bill.getNthPrime(20).reduce((acc,cur) => acc+cur, 0)/ 20
-console.log(bill.getNthPrime(20), "yo", total.toFixed(2))
+console.log(bill.getNthPrime(20), "yo", total.toFixed())
 
 module.exports = Prime;
 
