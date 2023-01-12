@@ -10,20 +10,17 @@ class Prime {
    while (this.primes.length < num ){
      let isPrimeFlag = true;
      for (let i = 2; i < numToCheck; i ++){
-
         if(numToCheck % i == 0){    
             isPrimeFlag = false;         
-            break;
-            
+            break;            
         }
-
      } 
      if (isPrimeFlag == true){
         this.primes.push(numToCheck);
      }
      numToCheck ++
-
    }
+
 
    return this.primes;
 }
@@ -31,7 +28,8 @@ class Prime {
 
 
 const bill = new Prime();
-console.log(bill.getNthPrime(20))
+const total = bill.getNthPrime(20).reduce((acc,cur) => acc+cur, 0)/ 20
+console.log(bill.getNthPrime(20), "yo", total.toFixed(2))
 
 module.exports = Prime;
 
